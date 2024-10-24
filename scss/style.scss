@@ -1,0 +1,175 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+.header {
+    position: relative;
+    background-color: #67C8FF;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding: 20px;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        gap: 30px;
+
+        &-link {
+            padding-bottom: 5px;
+        }
+
+        &-link.--active {
+            border-bottom: 2px solid #000;
+        }
+    }
+}
+
+.team {
+    margin-top: 90px;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__list {
+
+        &-item {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            width: 320px;
+            height: 390px;
+            background-color: #E7E7E5;
+            padding: 20px 20px 13px;
+            box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.25);
+
+            &__photo {
+                grid-column: span 2;
+                width: 280px;
+                height: 280px;
+                padding: 10px;
+                background-color: #0D120E;
+            }
+
+            &__name {
+                display: flex;
+                flex-direction: column;
+            }
+
+            &__image {
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+.callback {
+    margin: 160px 0 180px;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        gap: 80px;
+
+        &-left,
+        &-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &-left {
+            position: relative;
+            padding-left: 60px;
+        }
+
+        &-left::before {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 70px;
+            top: 0;
+            left: 0;
+            background-image: url('../images/callback-phone.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &-right {
+            align-items: flex-end;
+            gap: 10px;
+
+            &__link {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+
+        &-btn {
+            margin: 0 auto;
+        }
+    }
+}
+
+.footer {
+    background-color: #67C8FF;
+    box-shadow: 0px -4px 24px rgba(0, 0, 0, 0.25);
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__info,
+    &__copyright {
+        padding: 40px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        &-social {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            align-items: center;
+            text-transform: uppercase;
+
+            &__title {
+                grid-column: span 2;
+            }
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: uppercase;
+        background-color: #C9F5FF;
+        box-shadow: 0px -4px 24px rgba(0, 0, 0, 0.25);
+
+        &-text {
+            opacity: .5;
+        }
+    }
+}
+
+@import 'media';

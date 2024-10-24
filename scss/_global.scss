@@ -1,0 +1,93 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html,
+body {
+	min-height: 100%;
+}
+
+body {
+	color: #000000;
+	font-family: "Neucha", cursive;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+a {
+	color: inherit;
+	display: inline-block;
+	text-decoration: none;
+}
+
+ul,
+li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.main {
+	flex-grow: 1;
+	background-color: #C9F5FF;
+}
+
+.wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.container {
+	max-width: 1220px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.btn {
+	cursor: pointer;
+	font-family: 'Rubik Dirt';
+	font-size: 20px;
+	width: 300px;
+	background-color: #C9F5FF;
+	border: 1px solid #67C8FF;
+	border-radius: 20px;
+	margin: 0;
+	padding: 18px 25px;
+	transition: ease .3s;
+}
+
+.btn:hover {
+	color: #FFFFFF;
+	background-color: #67C8FF;
+	border: 1px solid #C9F5FF;
+	transition: ease .3s;
+}
+
+.section__title {
+	color: #000000;
+	font-size: 40px;
+	font-weight: 400;
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
