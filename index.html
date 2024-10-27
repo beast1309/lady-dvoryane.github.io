@@ -31,6 +31,27 @@
             <button class="header__btn btn" id="questionBtn">задать вопрос</button>
         </header>
         <main class="main">
+            <div class="questionForm">
+                <div class="questionForm__inner" style="background-image: url('./images/question-form-paw.png');">
+                    <button class="questionForm__close closeBtn" id="closeBtn">
+                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.0001 26L26.0001 16M26.0001 26L16.0001 16" stroke="#67C8FF" stroke-width="2"
+                                stroke-linecap="round" />
+                            <path
+                                d="M31 38.3244C28.0583 40.0261 24.6428 41 21 41C9.9544 41 1 32.0457 1 21C1 9.9544 9.9544 1 21 1C32.0457 1 41 9.9544 41 21C41 24.6428 40.0261 28.0583 38.3244 31"
+                                stroke="#67C8FF" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+
+                    <form class="questionForm__form" action="" id="questionForm">
+                        <input class="questionForm__form-input" type="text" placeholder="Ваше имя" required>
+                        <input class="questionForm__form-input" type="email" placeholder="Ваш e-mail" required>
+                        <textarea class="questionForm__form-textarea" name="" id="" placeholder="Текст вопроса"
+                            required></textarea>
+                        <button class="questionForm__form-btn btn" id="questionBtnSubmit">задать вопрос</button>
+                    </form>
+                </div>
+            </div>
             <section class="team">
                 <div class="container">
                     <div class="team__inner">
@@ -44,7 +65,7 @@
                                 <img class="team__list-item__image wow animate__animated animate__wobble animate__delay-1s"
                                     src="images/paw.png" alt="">
                             </div>
-                            <div class="team__list-item wow animate__animated animate__rollIn" data-wow-offset="10">
+                            <div class="team__list-item wow animate__animated animate__rollIn" data-wow-offset="200">
                                 <img class="team__list-item__photo" src="images/user-photo.png" alt="">
                                 <p class="team__list-item__name">Оксана
                                     <span class="team__list-item__role">Волонтёр</span>
@@ -52,7 +73,7 @@
                                 <img class="team__list-item__image wow animate__animated animate__wobble animate__delay-1s"
                                     src="images/paw.png" alt="">
                             </div>
-                            <div class="team__list-item wow animate__animated animate__rollIn" data-wow-offset="10">
+                            <div class="team__list-item wow animate__animated animate__rollIn" data-wow-offset="200">
                                 <img class="team__list-item__photo" src="images/user-photo.png" alt="">
                                 <p class="team__list-item__name">Дарья
                                     <span class="team__list-item__role">Волонтёр</span>
@@ -60,7 +81,7 @@
                                 <img class="team__list-item__image wow animate__animated animate__wobble animate__delay-1s"
                                     src="images/paw.png" alt="">
                             </div>
-                            <div class="team__list-item wow animate__animated animate__rollIn" data-wow-offset="10">
+                            <div class="team__list-item wow animate__animated animate__rollIn" data-wow-offset="200">
                                 <img class="team__list-item__photo" src="images/user-photo.png" alt="">
                                 <p class="team__list-item__name">Ксения
                                     <span class="team__list-item__role">Волонтёр</span>
@@ -68,7 +89,7 @@
                                 <img class="team__list-item__image wow animate__animated animate__wobble animate__delay-1s"
                                     src="images/paw.png" alt="">
                             </div>
-                            <div class="team__list-item wow animate__animated animate__rollIn" data-wow-offset="10">
+                            <div class="team__list-item wow animate__animated animate__rollIn" data-wow-offset="200">
                                 <img class="team__list-item__photo" src="images/user-photo.png" alt="">
                                 <p class="team__list-item__name">Екатерина
                                     <span class="team__list-item__role">Волонтёр</span>
@@ -76,7 +97,7 @@
                                 <img class="team__list-item__image wow animate__animated animate__wobble animate__delay-1s"
                                     src="images/paw.png" alt="">
                             </div>
-                            <div class="team__list-item wow animate__animated animate__rollIn" data-wow-offset="10">
+                            <div class="team__list-item wow animate__animated animate__rollIn" data-wow-offset="200">
                                 <img class="team__list-item__photo" src="images/user-photo.png" alt="">
                                 <p class="team__list-item__name">Светлана
                                     <span class="team__list-item__role">Волонтёр</span>
@@ -88,11 +109,9 @@
                     </div>
                 </div>
             </section>
-
             <section class="animateOne">
                 <div class="container">
                     <div class="animateOne__inner" style="background-image: url('./images/animateOne/firstCat.png');">
-
                         <img class="animateOne__highlight wow animate__animated animate__shakeX animate__infinite"
                             data-wow-duration="2.5s" src="images/animateOne/highlight-1.png" alt="">
                         <img class="animateOne__highlight wow animate__animated animate__shakeX animate__infinite"
@@ -105,7 +124,6 @@
                             data-wow-duration="3s" src="images/animateOne/star-4.png" alt="">
                         <img class="animateOne__highlight wow animate__animated animate__pulse animate__infinite"
                             data-wow-duration="2s" src="images/animateOne/star-4.png" alt="">
-
                         <svg class="animateOne__rainbow" width="501" height="33" viewBox="0 0 501 33" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <line class="line" x1="0.86792" y1="2.09863" x2="500.867" y2="2.09863" stroke="#F5DBB6"
@@ -124,12 +142,19 @@
                             <path class="line" d="M0.868164 30.0986L500.867 30.0986" stroke="#B47679"
                                 stroke-width="4" />
                         </svg>
-
                         <p class="animateOne__text">Пример текста Пример текста Пример текста Пример текста Пример
                             текста Пример
                             текста Пример текста Пример текста Пример текста Пример текста Пример текста Пример текста
                             Пример
                             текста Пример текста Пример текста Пример текста Пример текста Пример текста</p>
+                    </div>
+                </div>
+            </section>
+            <section class="founded">
+                <div class="container">
+                    <div class="founded__inner">
+                        <h3 class="founded__title section__title">Нашли свою семью</h3>
+
                     </div>
                 </div>
             </section>

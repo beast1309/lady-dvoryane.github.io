@@ -10,4 +10,12 @@ $(function () {
     )
     wow.init();
 
+
+    $(document.querySelectorAll('#questionBtn')).on('click', function () {
+        $('.questionForm').toggleClass('--active')
+    })
+
+    $('#closeBtn').on('click', function () {
+        $('.questionForm').removeClass('--active')
+    })
 });

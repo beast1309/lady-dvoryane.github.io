@@ -199,6 +199,15 @@
     }
 }
 
+.founded {
+    margin-top: 160px;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .callback {
     margin: 160px 0 180px;
 
