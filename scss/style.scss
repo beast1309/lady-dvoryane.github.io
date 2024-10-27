@@ -36,9 +36,14 @@
     &__inner {
         display: flex;
         flex-direction: column;
+        gap: 60px;
     }
 
     &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
 
         &-item {
             display: grid;
@@ -63,10 +68,134 @@
                 flex-direction: column;
             }
 
+            &__role {
+                padding-top: 4px;
+                margin-top: 8px;
+                border-top: 2px solid #67C8FF;
+            }
+
             &__image {
                 margin-left: auto;
             }
         }
+    }
+}
+
+.animateOne {
+    margin-top: 60px;
+
+    @keyframes pulse {
+        0% {
+            -webkit-transform: scale3d(0.5, 0.5, 0.5);
+            transform: scale3d(0.5, 0.5, 0.5);
+        }
+
+        50% {
+            -webkit-transform: scale3d(1.25, 1.25, 1.25);
+            transform: scale3d(1.25, 1.25, 1.25);
+        }
+
+        to {
+            -webkit-transform: scale3d(0.5, 0.5, 0.5);
+            transform: scale3d(0.5, 0.5, 0.5);
+        }
+    }
+
+    @keyframes shakeX {
+
+        0%,
+        to {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0)
+        }
+
+        10%,
+        30%,
+        50%,
+        70%,
+        90% {
+            -webkit-transform: translate3d(-2px, 0, 0);
+            transform: translate3d(-2px, 0, 0);
+        }
+
+        20%,
+        40%,
+        60%,
+        80% {
+            -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+        }
+    }
+
+    &__inner {
+        position: relative;
+        min-height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__highlight {
+        position: absolute;
+    }
+
+    &__highlight:nth-child(1) {
+        top: 50%;
+        left: 37%;
+        width: 3%;
+    }
+
+    &__highlight:nth-child(2) {
+        top: 39%;
+        right: 16%;
+        width: 3%;
+    }
+
+    &__highlight:nth-child(3) {
+        top: 23%;
+        left: 10%;
+    }
+
+    &__highlight:nth-child(4) {
+        top: 12%;
+        left: 20%;
+    }
+
+    &__highlight:nth-child(5) {
+        top: 50%;
+        left: 6%;
+    }
+
+    &__highlight:nth-child(6) {
+        top: 15%;
+        left: 30%;
+    }
+
+    &__rainbow {
+        position: absolute;
+        top: 7%;
+        left: -10%;
+        transform: rotate3d(10, -50, -6, 60deg);
+
+        .line {
+            stroke-dashoffset: 500;
+            stroke-dasharray: 500;
+            animation: animdash 5s infinite 6s;
+        }
+
+        @keyframes animdash {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    }
+
+    &__text {
+        position: absolute;
+        bottom: 20px;
+        right: 40px;
+        width: 320px;
+        font-family: 'Pangolin';
     }
 }
 
