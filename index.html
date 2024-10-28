@@ -12,6 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -154,11 +155,57 @@
                 <div class="container">
                     <div class="founded__inner">
                         <h3 class="founded__title section__title">Нашли свою семью</h3>
-
+                        <div class="founded__swiper swiper">
+                            <div class="founded__swiper-wrapper swiper-wrapper">
+                                <div class="founded__swiper-slide swiper-slide">
+                                    <img class="founded__swiper-slide__photo" src="images/swiper/slide-1.png" alt="">
+                                    <p class="founded__swiper-slide__text">Лаки</p>
+                                </div>
+                                <div class="founded__swiper-slide swiper-slide">
+                                    <img class="founded__swiper-slide__photo" src="images/swiper/slide-2.png" alt="">
+                                    <p class="founded__swiper-slide__text">Чувачок</p>
+                                </div>
+                                <div class="founded__swiper-slide swiper-slide">
+                                    <img class="founded__swiper-slide__photo" src="images/swiper/slide-3.png" alt="">
+                                    <p class="founded__swiper-slide__text">Штирлиц</p>
+                                </div>
+                                <div class="founded__swiper-slide swiper-slide">
+                                    <img class="founded__swiper-slide__photo" src="images/swiper/slide-1.png" alt="">
+                                    <p class="founded__swiper-slide__text">Лаки</p>
+                                </div>
+                                <div class="founded__swiper-slide swiper-slide">
+                                    <img class="founded__swiper-slide__photo" src="images/swiper/slide-2.png" alt="">
+                                    <p class="founded__swiper-slide__text">Чувачок</p>
+                                </div>
+                                <div class="founded__swiper-slide swiper-slide">
+                                    <img class="founded__swiper-slide__photo" src="images/swiper/slide-3.png" alt="">
+                                    <p class="founded__swiper-slide__text">Штирлиц</p>
+                                </div>
+                            </div>
+                            <div class="founded__swiper-navigation swiper-button-prev">
+                                <img class="founded__swiper-navigation__prev" src="images/swiper/prevSlide.svg" alt="">
+                            </div>
+                            <div class="founded__swiper-navigation swiper-button-next">
+                                <img class="founded__swiper-navigation__next" src="images/swiper/nextSlide.svg" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
+            <section class="homeless">
+                <div class="container">
+                    <div class="homeless__inner">
+                        <h3 class="homeless__title">Они ищут новый дом</h3>
+                        <ul class="homeless__list">
+                            <li class="homeless__list-item">
+                                <a class="homeless__list-link" href="#">
 
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
             <section class="callback">
                 <div class="container">
                     <div class="callback__inner">
@@ -265,6 +312,7 @@
     </div>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script>
         new WOW().init();

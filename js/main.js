@@ -10,6 +10,16 @@ $(function () {
     )
     wow.init();
 
+    const foundedSwiper = new Swiper('.founded__swiper', {
+        slidesPerView: 5,
+        loop: true,
+        speed: 500,
+        centeredSlides: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    })
 
     $(document.querySelectorAll('#questionBtn')).on('click', function () {
         $('.questionForm').toggleClass('--active')
