@@ -199,6 +199,113 @@
     }
 }
 
+.animateTwo {
+    margin-top: 160px;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 40px 1fr;
+        gap: 60px 40px;
+    }
+
+    &__title {
+        grid-column: 2;
+        grid-row: 1;
+        margin-left: auto;
+    }
+
+    &__image {
+        position: relative;
+        min-height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-column: 1;
+        grid-row: span 2;
+
+        &-star {
+            position: absolute;
+            border-radius: 40px;
+            box-shadow: 0px 0px 40px 10px #ffc61b;
+
+            @keyframes pulse {
+                0% {
+                    -webkit-transform: scale3d(0.5, 0.5, 0.5);
+                    transform: scale3d(0.5, 0.5, 0.5);
+                }
+
+                50% {
+                    -webkit-transform: scale3d(1.25, 1.25, 1.25);
+                    transform: scale3d(1.25, 1.25, 1.25);
+                }
+
+                to {
+                    -webkit-transform: scale3d(0.5, 0.5, 0.5);
+                    transform: scale3d(0.5, 0.5, 0.5);
+                }
+            }
+        }
+
+        &-star:nth-child(1) {
+            top: 5%;
+            left: 15%;
+        }
+
+        &-star:nth-child(2) {
+            top: 10%;
+            right: 25%;
+        }
+
+        &-star:nth-child(3) {
+            bottom: 31%;
+            left: 15%;
+        }
+
+        &-star:nth-child(4) {
+            top: 40%;
+            left: 25%;
+        }
+
+        &-star:nth-child(5) {
+            top: 27%;
+            left: 7%;
+        }
+
+        &-star:nth-child(6) {
+            top: 13%;
+            left: 47%;
+        }
+
+        &-planet {
+            position: absolute;
+            top: 51%;
+            left: 19%;
+
+            @keyframes fadeOutTopLeft {
+                0% {
+                    opacity: 1;
+                    -webkit-transform: translateZ(0) scale3d(0.1, 0.1, 0.1);
+                    transform: translateZ(0) scale3d(0.1, 0.1, 0.1);
+                }
+
+                to {
+                    opacity: 0;
+                    -webkit-transform: translate3d(-200%, -200%, 0) scale3d(1.5, 1.5, 1.5);
+                    transform: translate3d(-200%, -200%, 0) scale3d(1.5, 1.5, 1.5);
+                }
+            }
+        }
+    }
+
+    &__text {
+        margin-left: auto;
+        text-align: right;
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
+
 .founded {
     margin-top: 160px;
 
@@ -269,6 +376,27 @@
             scale: 1.1;
             z-index: 5;
             transition: ease .3s;
+        }
+    }
+}
+
+.main.pets {
+    .founded {
+        margin-top: 90px;
+
+        &__title {
+            margin-left: 0;
+            margin-right: auto;
+        }
+    }
+
+    .homeless {
+
+        &__list {
+            padding: 0 20px 30px 0;
+            max-height: 680px;
+            overflow-y: scroll;
+            scrollbar-color: #67C8FF #EC92A1;
         }
     }
 }
