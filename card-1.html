@@ -22,8 +22,8 @@
     <div class="wrapper">
         <header class="header">
             <nav class="header__nav">
-                <a class="header__nav-link --active" href="#">главная</a>
-                <a class="header__nav-link" href="pets.html">подопечные</a>
+                <a class="header__nav-link" href="index.html">главная</a>
+                <a class="header__nav-link --active" href="pets.html">подопечные</a>
                 <a class="header__nav-link" href="contacts.html">контакты</a>
             </nav>
             <a class="header__logo" href="#">
@@ -53,188 +53,122 @@
                     </form>
                 </div>
             </div>
-            <section class="team">
+            <section class="card">
                 <div class="container">
-                    <div class="team__inner">
-                        <h3 class="team__title section__title">Наша команда</h3>
-                        <div class="team__list">
-                            <div class="team__list-item wow animate__animated animate__rollIn">
-                                <img class="team__list-item__photo" src="images/user-photo.png" alt="">
-                                <p class="team__list-item__name">Милена
-                                    <span class="team__list-item__role">Основатель</span>
-                                </p>
-                                <img class="team__list-item__image wow animate__animated animate__wobble animate__delay-1s"
-                                    src="images/paw.png" alt="">
+                    <div class="card__inner">
+                        <div class="card__breadcrumbs">
+                            <a class="card__breadcrumbs-link" href="pets.html">подопечные</a>
+                            <p class="card__breadcrumbs-name">Хуан</p>
+                        </div>
+                        <h3 class="card__title section__title">О питомце</h3>
+                        <div class="card__info">
+                            <img class="card__info-img" src="images/content/card/main-img.png" alt="">
+                            <p class="card__info-name">
+                                Кличка:
+                                <span class="card__info-name__value" id="petName">Хуан</span>
+                            </p>
+                            <p class="card__info-age">
+                                Возраст:
+                                <span class="card__info-age__value" id="petAge">8 лет</span>
+                            </p>
+                            <p class="card__info-race">
+                                Порода:
+                                <span class="card__info-race__value" id="petRace">Мексиканец?</span>
+                            </p>
+                            <p class="card__info-comment">
+                                Немного о питомце:
+                                <span class="card__info-comment__value" id="petComment">Смешной как фрихолес и горячий
+                                    как халапеньо, сам построит себе вольер и заплатит за него, станет лучшим другом
+                                    вашей семьи.</span>
+                            </p>
+                        </div>
+
+                        <div class="card__swiper swiper">
+                            <div class="card__swiper-wrapper swiper-wrapper">
+                                <div class="card__swiper-slide swiper-slide">
+                                    <img class="card__swiper-slide__photo" src="images/content/card/main-img.png"
+                                        alt="">
+                                    <p class="card__swiper-slide__text">01.01.1999</p>
+                                </div>
+                                <div class="card__swiper-slide swiper-slide">
+                                    <img class="card__swiper-slide__photo" src="images/content/card/main-img.png"
+                                        alt="">
+                                    <p class="card__swiper-slide__text">01.01.1999</p>
+                                </div>
+                                <div class="card__swiper-slide swiper-slide">
+                                    <img class="card__swiper-slide__photo" src="images/content/card/main-img.png"
+                                        alt="">
+                                    <p class="card__swiper-slide__text">01.01.1999</p>
+                                </div>
+                                <div class="card__swiper-slide swiper-slide">
+                                    <img class="card__swiper-slide__photo" src="images/content/card/main-img.png"
+                                        alt="">
+                                    <p class="card__swiper-slide__text">01.01.1999</p>
+                                </div>
+                                <div class="card__swiper-slide swiper-slide">
+                                    <img class="card__swiper-slide__photo" src="images/content/card/main-img.png"
+                                        alt="">
+                                    <p class="card__swiper-slide__text">01.01.1999</p>
+                                </div>
+                                <div class="card__swiper-slide swiper-slide">
+                                    <img class="card__swiper-slide__photo" src="images/content/card/main-img.png"
+                                        alt="">
+                                    <p class="card__swiper-slide__text">01.01.1999</p>
+                                </div>
                             </div>
-                            <div class="team__list-item wow animate__animated animate__rollIn" data-wow-offset="200">
-                                <img class="team__list-item__photo" src="images/user-photo.png" alt="">
-                                <p class="team__list-item__name">Оксана
-                                    <span class="team__list-item__role">Волонтёр</span>
-                                </p>
-                                <img class="team__list-item__image wow animate__animated animate__wobble animate__delay-1s"
-                                    src="images/paw.png" alt="">
+                            <div class="card__swiper-navigation swiper-button-prev">
+                                <img class="card__swiper-navigation__prev" src="images/swiper/prevSlide.svg" alt="">
                             </div>
-                            <div class="team__list-item wow animate__animated animate__rollIn" data-wow-offset="200">
-                                <img class="team__list-item__photo" src="images/user-photo.png" alt="">
-                                <p class="team__list-item__name">Дарья
-                                    <span class="team__list-item__role">Волонтёр</span>
-                                </p>
-                                <img class="team__list-item__image wow animate__animated animate__wobble animate__delay-1s"
-                                    src="images/paw.png" alt="">
-                            </div>
-                            <div class="team__list-item wow animate__animated animate__rollIn" data-wow-offset="200">
-                                <img class="team__list-item__photo" src="images/user-photo.png" alt="">
-                                <p class="team__list-item__name">Ксения
-                                    <span class="team__list-item__role">Волонтёр</span>
-                                </p>
-                                <img class="team__list-item__image wow animate__animated animate__wobble animate__delay-1s"
-                                    src="images/paw.png" alt="">
-                            </div>
-                            <div class="team__list-item wow animate__animated animate__rollIn" data-wow-offset="200">
-                                <img class="team__list-item__photo" src="images/user-photo.png" alt="">
-                                <p class="team__list-item__name">Екатерина
-                                    <span class="team__list-item__role">Волонтёр</span>
-                                </p>
-                                <img class="team__list-item__image wow animate__animated animate__wobble animate__delay-1s"
-                                    src="images/paw.png" alt="">
-                            </div>
-                            <div class="team__list-item wow animate__animated animate__rollIn" data-wow-offset="200">
-                                <img class="team__list-item__photo" src="images/user-photo.png" alt="">
-                                <p class="team__list-item__name">Светлана
-                                    <span class="team__list-item__role">Волонтёр</span>
-                                </p>
-                                <img class="team__list-item__image wow animate__animated animate__wobble animate__delay-1s"
-                                    src="images/paw.png" alt="">
+                            <div class="card__swiper-navigation swiper-button-next">
+                                <img class="card__swiper-navigation__next" src="images/swiper/nextSlide.svg" alt="">
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-            <section class="animateOne">
-                <div class="container">
-                    <div class="animateOne__inner" style="background-image: url('./images/animateOne/firstCat.png');">
-                        <img class="animateOne__highlight wow animate__animated animate__shakeX animate__infinite"
-                            data-wow-duration="2.5s" src="images/animateOne/highlight-1.png" alt="">
-                        <img class="animateOne__highlight wow animate__animated animate__shakeX animate__infinite"
-                            data-wow-duration="2.5s" src="images/animateOne/highlight-2.png" alt="">
-                        <img class="animateOne__highlight wow animate__animated animate__pulse animate__infinite"
-                            data-wow-duration="4s" src="images/animateOne/star-3.png" alt="">
-                        <img class="animateOne__highlight wow animate__animated animate__pulse animate__infinite"
-                            data-wow-duration="3s" src="images/animateOne/star-4.png" alt="">
-                        <img class="animateOne__highlight wow animate__animated animate__pulse animate__infinite"
-                            data-wow-duration="3s" src="images/animateOne/star-4.png" alt="">
-                        <img class="animateOne__highlight wow animate__animated animate__pulse animate__infinite"
-                            data-wow-duration="2s" src="images/animateOne/star-4.png" alt="">
-                        <svg class="animateOne__rainbow" width="501" height="33" viewBox="0 0 501 33" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <line class="line" x1="0.86792" y1="2.09863" x2="500.867" y2="2.09863" stroke="#F5DBB6"
-                                stroke-width="4" />
-                            <line class="line" x1="0.868896" y1="6.09863" x2="500.868" y2="6.09863" stroke="#6873A0"
-                                stroke-width="4" />
-                            <line class="line" x1="0.86792" y1="10.0986" x2="500.867" y2="10.0986" stroke="#68A3A0"
-                                stroke-width="4" />
-                            <line class="line" x1="0.867432" y1="18.0986" x2="500.866" y2="18.0986" stroke="#C2AF6D"
-                                stroke-width="4" />
-                            <line class="line" x1="0.868164" y1="14.0986" x2="500.867" y2="14.0986" stroke="#FDC651"
-                                stroke-width="4" />
-                            <path class="line" d="M0.868896 22.0986L500.868 22.0986" stroke="#EDA76B"
-                                stroke-width="4" />
-                            <path class="line" d="M0.86792 26.0986L500.867 26.0986" stroke="#F35844" stroke-width="4" />
-                            <path class="line" d="M0.868164 30.0986L500.867 30.0986" stroke="#B47679"
-                                stroke-width="4" />
-                        </svg>
-                        <p class="animateOne__text">Пример текста Пример текста Пример текста Пример текста Пример
-                            текста Пример
-                            текста Пример текста Пример текста Пример текста Пример текста Пример текста Пример текста
-                            Пример
-                            текста Пример текста Пример текста Пример текста Пример текста Пример текста</p>
-                    </div>
-                </div>
-            </section>
-            <section class="founded">
-                <div class="container">
-                    <div class="founded__inner">
-                        <h3 class="founded__title section__title">Нашли свою семью</h3>
-                        <div class="founded__swiper swiper">
-                            <div class="founded__swiper-wrapper swiper-wrapper">
-                                <div class="founded__swiper-slide swiper-slide">
-                                    <img class="founded__swiper-slide__photo" src="images/swiper/slide-1.png" alt="">
-                                    <p class="founded__swiper-slide__text">Лаки</p>
-                                </div>
-                                <div class="founded__swiper-slide swiper-slide">
-                                    <img class="founded__swiper-slide__photo" src="images/swiper/slide-2.png" alt="">
-                                    <p class="founded__swiper-slide__text">Чувачок</p>
-                                </div>
-                                <div class="founded__swiper-slide swiper-slide">
-                                    <img class="founded__swiper-slide__photo" src="images/swiper/slide-3.png" alt="">
-                                    <p class="founded__swiper-slide__text">Штирлиц</p>
-                                </div>
-                                <div class="founded__swiper-slide swiper-slide">
-                                    <img class="founded__swiper-slide__photo" src="images/swiper/slide-1.png" alt="">
-                                    <p class="founded__swiper-slide__text">Лаки</p>
-                                </div>
-                                <div class="founded__swiper-slide swiper-slide">
-                                    <img class="founded__swiper-slide__photo" src="images/swiper/slide-2.png" alt="">
-                                    <p class="founded__swiper-slide__text">Чувачок</p>
-                                </div>
-                                <div class="founded__swiper-slide swiper-slide">
-                                    <img class="founded__swiper-slide__photo" src="images/swiper/slide-3.png" alt="">
-                                    <p class="founded__swiper-slide__text">Штирлиц</p>
+
+                        <div class="card__form">
+                            <button class="card__form-btn btn" id="acceptBtn">принять в семью
+                                <svg class="card__form-btn__img" width="40" height="36" viewBox="0 0 40 36" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M39.9938 10.9889C39.4023 4.3646 34.5381 0.943616 30.2706 0.570076C25.021 0.110062 22.2568 1.72276 20 3.8837C17.7432 1.72158 14.9696 0.108004 9.7294 0.568899C5.45987 0.94244 0.596782 4.36372 0.00617665 10.9889L0 13.0249L0.00529427 13.1616C0.606488 20.0912 6.8705 27.227 19.157 34.9784L19.9991 35.5099L20.8412 34.9784C33.1274 27.2267 39.3929 20.0901 39.9929 13.1616L40.0003 11.1289L39.9938 10.9889ZM21.9959 9.31533C21.9959 9.31533 22.8401 10.6563 22.8401 12.3142L21.9959 12.0889V9.31533ZM21.9706 12.9616C23.8001 12.9331 24.0295 15.8291 23.8433 16.8458C23.6739 17.7806 22.9224 18.9512 21.9706 18.9512C21.02 18.9512 20.2474 18.1777 20.2474 17.2259C20.2474 16.2744 20.1432 12.9901 21.9706 12.9616ZM18.0044 9.31533V12.1195L17.1602 12.3142C17.1599 10.6565 18.0044 9.31533 18.0044 9.31533ZM17.6832 12.9616C19.6653 12.7784 19.4065 16.2752 19.4065 17.2267C19.4065 18.1782 18.635 18.9521 17.6832 18.9521C16.7314 18.9521 16.3452 18.0953 15.959 17.2267C15.4852 16.167 15.701 13.1449 17.6832 12.9616ZM12.9695 13.3363V16.0544L12.1254 16.3344C12.1262 14.6775 12.9695 13.3363 12.9695 13.3363ZM12.881 21.4995C12.4977 20.6301 11.4756 17.5541 12.7357 16.9017C13.9936 16.2482 15.6513 19.2374 16.0337 20.1071C16.419 20.9766 16.0252 21.9966 15.1557 22.3798C14.2842 22.7648 13.2674 22.369 12.881 21.4995ZM25.5284 25.2649C24.0989 27.7859 22.9683 25.5638 19.8106 25.5638C16.6528 25.5638 15.599 27.8112 14.0907 25.2649C13.3022 23.9334 15.9108 22.8922 16.7487 22.1092C17.7973 21.1304 18.0549 19.3524 19.8097 19.3524C21.4824 19.3524 21.8403 21.1007 22.8854 22.0134C23.8157 22.8228 26.3758 23.7755 25.5284 25.2649ZM26.8696 21.5016C26.5443 22.3963 25.5549 22.8596 24.6613 22.5331C23.7666 22.2078 22.9204 20.9321 23.2445 20.0383C23.3877 19.6477 24.3045 19.5889 24.8328 18.9097C25.5096 18.0424 25.8813 16.6023 26.7087 16.9064C28.1852 17.4459 27.1937 20.6101 26.8696 21.5016ZM27.0305 16.0544V13.3363C27.0305 13.3363 27.8746 14.6773 27.8746 16.3344L27.0305 16.0544Z"
+                                        fill="#010002" />
+                                </svg>
+                            </button>
+
+                            <div class="acceptForm">
+                                <div class="acceptForm__inner"
+                                    style="background-image: url('./images/question-form-paw.png');">
+                                    <button class="acceptForm__close closeBtn" id="closeBtn">
+                                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16.0001 26L26.0001 16M26.0001 26L16.0001 16" stroke="#67C8FF"
+                                                stroke-width="2" stroke-linecap="round" />
+                                            <path
+                                                d="M31 38.3244C28.0583 40.0261 24.6428 41 21 41C9.9544 41 1 32.0457 1 21C1 9.9544 9.9544 1 21 1C32.0457 1 41 9.9544 41 21C41 24.6428 40.0261 28.0583 38.3244 31"
+                                                stroke="#67C8FF" stroke-width="2" stroke-linecap="round" />
+                                        </svg>
+                                    </button>
+
+                                    <form class="acceptForm__form" action="" id="acceptForm">
+                                        <input class="acceptForm__form-input" type="text" placeholder="Ваше имя"
+                                            required>
+                                        <input class="acceptForm__form-input" type="email" placeholder="Ваш e-mail"
+                                            required>
+                                        <textarea class="acceptForm__form-textarea" name="" id=""
+                                            placeholder="Текст вопроса" required></textarea>
+                                        <button class="acceptForm__form-btn btn" id="acceptBtnSubmit">
+                                            принять в семью
+                                            <svg class="card__form-btn__img" width="40" height="36" viewBox="0 0 40 36"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M39.9938 10.9889C39.4023 4.3646 34.5381 0.943616 30.2706 0.570076C25.021 0.110062 22.2568 1.72276 20 3.8837C17.7432 1.72158 14.9696 0.108004 9.7294 0.568899C5.45987 0.94244 0.596782 4.36372 0.00617665 10.9889L0 13.0249L0.00529427 13.1616C0.606488 20.0912 6.8705 27.227 19.157 34.9784L19.9991 35.5099L20.8412 34.9784C33.1274 27.2267 39.3929 20.0901 39.9929 13.1616L40.0003 11.1289L39.9938 10.9889ZM21.9959 9.31533C21.9959 9.31533 22.8401 10.6563 22.8401 12.3142L21.9959 12.0889V9.31533ZM21.9706 12.9616C23.8001 12.9331 24.0295 15.8291 23.8433 16.8458C23.6739 17.7806 22.9224 18.9512 21.9706 18.9512C21.02 18.9512 20.2474 18.1777 20.2474 17.2259C20.2474 16.2744 20.1432 12.9901 21.9706 12.9616ZM18.0044 9.31533V12.1195L17.1602 12.3142C17.1599 10.6565 18.0044 9.31533 18.0044 9.31533ZM17.6832 12.9616C19.6653 12.7784 19.4065 16.2752 19.4065 17.2267C19.4065 18.1782 18.635 18.9521 17.6832 18.9521C16.7314 18.9521 16.3452 18.0953 15.959 17.2267C15.4852 16.167 15.701 13.1449 17.6832 12.9616ZM12.9695 13.3363V16.0544L12.1254 16.3344C12.1262 14.6775 12.9695 13.3363 12.9695 13.3363ZM12.881 21.4995C12.4977 20.6301 11.4756 17.5541 12.7357 16.9017C13.9936 16.2482 15.6513 19.2374 16.0337 20.1071C16.419 20.9766 16.0252 21.9966 15.1557 22.3798C14.2842 22.7648 13.2674 22.369 12.881 21.4995ZM25.5284 25.2649C24.0989 27.7859 22.9683 25.5638 19.8106 25.5638C16.6528 25.5638 15.599 27.8112 14.0907 25.2649C13.3022 23.9334 15.9108 22.8922 16.7487 22.1092C17.7973 21.1304 18.0549 19.3524 19.8097 19.3524C21.4824 19.3524 21.8403 21.1007 22.8854 22.0134C23.8157 22.8228 26.3758 23.7755 25.5284 25.2649ZM26.8696 21.5016C26.5443 22.3963 25.5549 22.8596 24.6613 22.5331C23.7666 22.2078 22.9204 20.9321 23.2445 20.0383C23.3877 19.6477 24.3045 19.5889 24.8328 18.9097C25.5096 18.0424 25.8813 16.6023 26.7087 16.9064C28.1852 17.4459 27.1937 20.6101 26.8696 21.5016ZM27.0305 16.0544V13.3363C27.0305 13.3363 27.8746 14.6773 27.8746 16.3344L27.0305 16.0544Z"
+                                                    fill="#010002" />
+                                            </svg>
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
-                            <div class="founded__swiper-navigation swiper-button-prev">
-                                <img class="founded__swiper-navigation__prev" src="images/swiper/prevSlide.svg" alt="">
-                            </div>
-                            <div class="founded__swiper-navigation swiper-button-next">
-                                <img class="founded__swiper-navigation__next" src="images/swiper/nextSlide.svg" alt="">
-                            </div>
+
                         </div>
-                    </div>
-                </div>
-            </section>
-            <section class="homeless">
-                <div class="container">
-                    <div class="homeless__inner">
-                        <h3 class="homeless__title section__title">Они ищут новый дом</h3>
-                        <ul class="homeless__list">
-                            <li class="homeless__list-item">
-                                <a class="homeless__list-link" id="1" href="card-1.html">
-                                    <img class="homeless__list-link__img" src="images/content/homeless-2.png" alt="">
-                                    <p class="homeless__list-link__name">Хуан</p>
-                                </a>
-                            </li>
-                            <li class="homeless__list-item">
-                                <a class="homeless__list-link" id="0" href="card-2.html">
-                                    <img class="homeless__list-link__img" src="images/content/homeless-1.png" alt="">
-                                    <p class="homeless__list-link__name">Чувачок</p>
-                                </a>
-                            </li>
-                            <li class="homeless__list-item">
-                                <a class="homeless__list-link" id="2" href="card-3.html">
-                                    <img class="homeless__list-link__img" src="images/content/homeless-3.png" alt="">
-                                    <p class="homeless__list-link__name">Лаки</p>
-                                </a>
-                            </li>
-                            <li class="homeless__list-item">
-                                <a class="homeless__list-link" id="3" href="card-4.html">
-                                    <img class="homeless__list-link__img" src="images/content/homeless-4.png" alt="">
-                                    <p class="homeless__list-link__name">Мистер Котёнок</p>
-                                </a>
-                            </li>
-                            <li class="homeless__list-item">
-                                <a class="homeless__list-link" id="4" href="card-5.html">
-                                    <img class="homeless__list-link__img" src="images/content/homeless-5.png" alt="">
-                                    <p class="homeless__list-link__name">Котолик</p>
-                                </a>
-                            </li>
-                            <li class="homeless__list-item">
-                                <a class="homeless__list-link" id="5" href="card-6.html">
-                                    <img class="homeless__list-link__img" src="images/content/homeless-6.png" alt="">
-                                    <p class="homeless__list-link__name">Штирлиц</p>
-                                </a>
-                            </li>
-                        </ul>
-                        <a class="homeless__btn btn" id="petsLink" href="#">больше питомцев</a>
                     </div>
                 </div>
             </section>

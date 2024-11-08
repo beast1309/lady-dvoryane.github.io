@@ -55,7 +55,8 @@ li {
 	padding: 0 10px;
 }
 
-.questionForm {
+.questionForm,
+.acceptForm {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -125,7 +126,8 @@ li {
 	}
 }
 
-.questionForm.--active {
+.questionForm.--active,
+.acceptForm.--active {
 	transform: translateY(0);
 	transition: ease .5s;
 }
@@ -134,6 +136,10 @@ li {
 	cursor: pointer;
 	color: #000000;
 	font-family: 'Rubik Dirt';
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
 	font-size: 20px;
 	text-align: center;
 	width: 300px;
@@ -150,6 +156,12 @@ li {
 	background-color: #67C8FF;
 	border: 1px solid #C9F5FF;
 	transition: ease .3s;
+
+	.card__form-btn__img {
+		path {
+			fill: #EC92A1;
+		}
+	}
 }
 
 .closeBtn {
