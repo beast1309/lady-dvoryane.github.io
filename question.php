@@ -1,3 +1,42 @@
+<?php
+ini_set('display__errors', 'On');
+/* error_reporting('E_ALL'); */
+
+$to = 'https://e.mail.ru/inbox/slupitskey@mail.ru';
+$siteName = $_SERVER['SERVER_NAME'];
+$name = strip_tags($_POST['name']);
+$mail = strip_tags($_POST['mail']);
+$question = strip_tags($_POST['question']);
+
+if (isset($_POST['name']) && !empty($_POST['name'])) {
+    $subject = "[Zaiavka s sajta '.$siteName.']";
+    $headers = "From mail@ '.$siteName.' \r\n";
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/html;charset=utf-8 \r\n";
+
+    $msg = "<html><body style='font-family:Arial, sans-serif;'>";
+    $msg .= "<h2 style='font-weight:bold;border-bottom:1px dotted #ccc;'>Новый вопрос:</h2>\r\n";
+
+    if (isset($_POST['name']) && !empty($_POST['name'])) {
+        $msg .= "<p><strong>Имя:</strong>.$name.</p>\r\n";
+    }
+
+    if (isset($_POST['mail']) && !empty($_POST['mail'])) {
+        $msg .= "<p><strong>Почта:</strong>.$mail.</p>\r\n";
+    }
+
+    if (isset($_POST['question']) && !empty($_POST['question'])) {
+        $msg .= "<p><strong>Вопрос:</strong>.$question.</p>\r\n";
+    }
+
+    $msg .= "</body></html>";
+
+    mail($to, $subject, $msg, $headers);
+} else {
+    echo "false";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -22,9 +61,9 @@
     <div class="wrapper">
         <header class="header">
             <nav class="header__nav">
-                <a class="header__nav-link" href="index.html">главная</a>
+                <a class="header__nav-link --active" href="#">главная</a>
                 <a class="header__nav-link" href="pets.html">подопечные</a>
-                <a class="header__nav-link --active" href="#">контакты</a>
+                <a class="header__nav-link" href="contacts.html">контакты</a>
             </nav>
             <a class="header__logo" href="#">
                 <img class="header__logo-image" src="images/header-logo.png" alt="">
@@ -44,7 +83,7 @@
                         </svg>
                     </button>
 
-                    <form class="questionForm__form" action="" method="post" id="questionForm">
+                    <form class="questionForm__form" action="question.php" method="post" id="questionForm">
                         <input class="questionForm__form-input" name="name" type="text" placeholder="Ваше имя" required>
                         <input class="questionForm__form-input" name="mail" type="email" placeholder="Ваш e-mail"
                             required>
@@ -108,6 +147,134 @@
                                     src="images/paw.png" alt="">
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section class="animateOne">
+                <div class="container">
+                    <div class="animateOne__inner" style="background-image: url('./images/animateOne/firstCat.png');">
+                        <img class="animateOne__highlight wow animate__animated animate__shakeX animate__infinite"
+                            data-wow-duration="2.5s" src="images/animateOne/highlight-1.png" alt="">
+                        <img class="animateOne__highlight wow animate__animated animate__shakeX animate__infinite"
+                            data-wow-duration="2.5s" src="images/animateOne/highlight-2.png" alt="">
+                        <img class="animateOne__highlight wow animate__animated animate__pulse animate__infinite"
+                            data-wow-duration="4s" src="images/animateOne/star-3.png" alt="">
+                        <img class="animateOne__highlight wow animate__animated animate__pulse animate__infinite"
+                            data-wow-duration="3s" src="images/animateOne/star-4.png" alt="">
+                        <img class="animateOne__highlight wow animate__animated animate__pulse animate__infinite"
+                            data-wow-duration="3s" src="images/animateOne/star-4.png" alt="">
+                        <img class="animateOne__highlight wow animate__animated animate__pulse animate__infinite"
+                            data-wow-duration="2s" src="images/animateOne/star-4.png" alt="">
+                        <svg class="animateOne__rainbow" width="501" height="33" viewBox="0 0 501 33" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <line class="line" x1="0.86792" y1="2.09863" x2="500.867" y2="2.09863" stroke="#F5DBB6"
+                                stroke-width="4" />
+                            <line class="line" x1="0.868896" y1="6.09863" x2="500.868" y2="6.09863" stroke="#6873A0"
+                                stroke-width="4" />
+                            <line class="line" x1="0.86792" y1="10.0986" x2="500.867" y2="10.0986" stroke="#68A3A0"
+                                stroke-width="4" />
+                            <line class="line" x1="0.867432" y1="18.0986" x2="500.866" y2="18.0986" stroke="#C2AF6D"
+                                stroke-width="4" />
+                            <line class="line" x1="0.868164" y1="14.0986" x2="500.867" y2="14.0986" stroke="#FDC651"
+                                stroke-width="4" />
+                            <path class="line" d="M0.868896 22.0986L500.868 22.0986" stroke="#EDA76B"
+                                stroke-width="4" />
+                            <path class="line" d="M0.86792 26.0986L500.867 26.0986" stroke="#F35844" stroke-width="4" />
+                            <path class="line" d="M0.868164 30.0986L500.867 30.0986" stroke="#B47679"
+                                stroke-width="4" />
+                        </svg>
+                        <p class="animateOne__text">Пример текста Пример текста Пример текста Пример текста Пример
+                            текста Пример
+                            текста Пример текста Пример текста Пример текста Пример текста Пример текста Пример текста
+                            Пример
+                            текста Пример текста Пример текста Пример текста Пример текста Пример текста</p>
+                    </div>
+                </div>
+            </section>
+            <section class="founded">
+                <div class="container">
+                    <div class="founded__inner">
+                        <h3 class="founded__title section__title">Нашли свою семью</h3>
+                        <div class="founded__swiper swiper">
+                            <div class="founded__swiper-wrapper swiper-wrapper">
+                                <div class="founded__swiper-slide swiper-slide">
+                                    <img class="founded__swiper-slide__photo" src="images/swiper/slide-1.png" alt="">
+                                    <p class="founded__swiper-slide__text">Лаки</p>
+                                </div>
+                                <div class="founded__swiper-slide swiper-slide">
+                                    <img class="founded__swiper-slide__photo" src="images/swiper/slide-2.png" alt="">
+                                    <p class="founded__swiper-slide__text">Чувачок</p>
+                                </div>
+                                <div class="founded__swiper-slide swiper-slide">
+                                    <img class="founded__swiper-slide__photo" src="images/swiper/slide-3.png" alt="">
+                                    <p class="founded__swiper-slide__text">Штирлиц</p>
+                                </div>
+                                <div class="founded__swiper-slide swiper-slide">
+                                    <img class="founded__swiper-slide__photo" src="images/swiper/slide-1.png" alt="">
+                                    <p class="founded__swiper-slide__text">Лаки</p>
+                                </div>
+                                <div class="founded__swiper-slide swiper-slide">
+                                    <img class="founded__swiper-slide__photo" src="images/swiper/slide-2.png" alt="">
+                                    <p class="founded__swiper-slide__text">Чувачок</p>
+                                </div>
+                                <div class="founded__swiper-slide swiper-slide">
+                                    <img class="founded__swiper-slide__photo" src="images/swiper/slide-3.png" alt="">
+                                    <p class="founded__swiper-slide__text">Штирлиц</p>
+                                </div>
+                            </div>
+                            <div class="founded__swiper-navigation swiper-button-prev">
+                                <img class="founded__swiper-navigation__prev" src="images/swiper/prevSlide.svg" alt="">
+                            </div>
+                            <div class="founded__swiper-navigation swiper-button-next">
+                                <img class="founded__swiper-navigation__next" src="images/swiper/nextSlide.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="homeless">
+                <div class="container">
+                    <div class="homeless__inner">
+                        <h3 class="homeless__title section__title">Они ищут новый дом</h3>
+                        <ul class="homeless__list">
+                            <li class="homeless__list-item">
+                                <a class="homeless__list-link" id="1" href="card-1.html">
+                                    <img class="homeless__list-link__img" src="images/content/homeless-2.png" alt="">
+                                    <p class="homeless__list-link__name">Хуан</p>
+                                </a>
+                            </li>
+                            <li class="homeless__list-item">
+                                <a class="homeless__list-link" id="0" href="card-2.html">
+                                    <img class="homeless__list-link__img" src="images/content/homeless-1.png" alt="">
+                                    <p class="homeless__list-link__name">Чувачок</p>
+                                </a>
+                            </li>
+                            <li class="homeless__list-item">
+                                <a class="homeless__list-link" id="2" href="card-3.html">
+                                    <img class="homeless__list-link__img" src="images/content/homeless-3.png" alt="">
+                                    <p class="homeless__list-link__name">Лаки</p>
+                                </a>
+                            </li>
+                            <li class="homeless__list-item">
+                                <a class="homeless__list-link" id="3" href="card-4.html">
+                                    <img class="homeless__list-link__img" src="images/content/homeless-4.png" alt="">
+                                    <p class="homeless__list-link__name">Мистер Котёнок</p>
+                                </a>
+                            </li>
+                            <li class="homeless__list-item">
+                                <a class="homeless__list-link" id="4" href="card-5.html">
+                                    <img class="homeless__list-link__img" src="images/content/homeless-5.png" alt="">
+                                    <p class="homeless__list-link__name">Котолик</p>
+                                </a>
+                            </li>
+                            <li class="homeless__list-item">
+                                <a class="homeless__list-link" id="5" href="card-6.html">
+                                    <img class="homeless__list-link__img" src="images/content/homeless-6.png" alt="">
+                                    <p class="homeless__list-link__name">Штирлиц</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <a class="homeless__btn btn" id="petsLink" href="#">больше питомцев</a>
                     </div>
                 </div>
             </section>

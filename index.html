@@ -21,6 +21,13 @@
 
     <div class="wrapper">
         <header class="header">
+            <button class="header__menu burgerBtn" id="burgerBtn">
+                <svg width="70" height="35" viewBox="0 0 70 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="10" y1="2.5" x2="70" y2="2.5" stroke="#EC92A1" stroke-width="5" />
+                    <line y1="17.5" x2="60" y2="17.5" stroke="#EC92A1" stroke-width="5" />
+                    <line x1="10" y1="32.5" x2="70" y2="32.5" stroke="#EC92A1" stroke-width="5" />
+                </svg>
+            </button>
             <nav class="header__nav">
                 <a class="header__nav-link --active" href="#">главная</a>
                 <a class="header__nav-link" href="pets.html">подопечные</a>
@@ -44,10 +51,11 @@
                         </svg>
                     </button>
 
-                    <form class="questionForm__form" action="" id="questionForm">
-                        <input class="questionForm__form-input" type="text" placeholder="Ваше имя" required>
-                        <input class="questionForm__form-input" type="email" placeholder="Ваш e-mail" required>
-                        <textarea class="questionForm__form-textarea" name="" id="" placeholder="Текст вопроса"
+                    <form class="questionForm__form" action="question.php" method="post" id="questionForm">
+                        <input class="questionForm__form-input" name="name" type="text" placeholder="Ваше имя" required>
+                        <input class="questionForm__form-input" name="mail" type="email" placeholder="Ваш e-mail"
+                            required>
+                        <textarea class="questionForm__form-textarea" name="question" id="" placeholder="Текст вопроса"
                             required></textarea>
                         <button class="questionForm__form-btn btn" id="questionBtnSubmit">задать вопрос</button>
                     </form>

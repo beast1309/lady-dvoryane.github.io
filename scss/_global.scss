@@ -186,6 +186,27 @@ li {
 	}
 }
 
+.burgerBtn {
+	display: none;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	transition: ease .3s;
+	z-index: 10;
+
+	line {
+		stroke: #3765A3;
+	}
+}
+
+.burgerBtn.--active {
+	line {
+		stroke: #EC92A1;
+	}
+}
+
 .section__title {
 	color: #000000;
 	font-size: 40px;

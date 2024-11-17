@@ -44,10 +44,11 @@
                         </svg>
                     </button>
 
-                    <form class="questionForm__form" action="" id="questionForm">
-                        <input class="questionForm__form-input" type="text" placeholder="Ваше имя" required>
-                        <input class="questionForm__form-input" type="email" placeholder="Ваш e-mail" required>
-                        <textarea class="questionForm__form-textarea" name="" id="" placeholder="Текст вопроса"
+                    <form class="questionForm__form" action="" method="post" id="questionForm">
+                        <input class="questionForm__form-input" name="name" type="text" placeholder="Ваше имя" required>
+                        <input class="questionForm__form-input" name="mail" type="email" placeholder="Ваш e-mail"
+                            required>
+                        <textarea class="questionForm__form-textarea" name="question" id="" placeholder="Текст вопроса"
                             required></textarea>
                         <button class="questionForm__form-btn btn" id="questionBtnSubmit">задать вопрос</button>
                     </form>
@@ -148,13 +149,13 @@
                                         </svg>
                                     </button>
 
-                                    <form class="acceptForm__form" action="" id="acceptForm">
-                                        <input class="acceptForm__form-input" type="text" placeholder="Ваше имя"
-                                            required>
-                                        <input class="acceptForm__form-input" type="email" placeholder="Ваш e-mail"
-                                            required>
-                                        <textarea class="acceptForm__form-textarea" name="" id=""
-                                            placeholder="Текст вопроса" required></textarea>
+                                    <form class="acceptForm__form" action="" method="post" id="acceptForm">
+                                        <input class="acceptForm__form-input" name="name" type="text"
+                                            placeholder="Ваше имя" required>
+                                        <input class="acceptForm__form-input" name="mail" type="email"
+                                            placeholder="Ваш e-mail" required>
+                                        <input class="acceptForm__form-input" name="phone" type="tel"
+                                            placeholder="Ваш номер телефона" required>
                                         <button class="acceptForm__form-btn btn" id="acceptBtnSubmit">
                                             принять в семью
                                             <svg class="card__form-btn__img" width="40" height="36" viewBox="0 0 40 36"

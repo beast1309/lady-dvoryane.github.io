@@ -11,14 +11,24 @@ $(async function () {
     wow.init();
 
     const foundedSwiper = new Swiper('.founded__swiper', {
-        slidesPerView: 5,
+        slidesPerView: 3,
         loop: true,
         speed: 500,
-        centeredSlides: true,
+        /* centeredSlides: true, */
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+            720: {
+                centeredSlides: true,
+                slidesPerView: 4
+            },
+            1200: {
+                centeredSlides: true,
+                slidesPerView: 5
+            }
+        }
     })
 
     const cardSwiper = new Swiper('.card__swiper', {
@@ -45,44 +55,42 @@ $(async function () {
         $('.acceptForm').toggleClass('--active')
     })
 
-    /* function loadJSON(src) {
-        return fetch(src).then(x => x.json())
-    }
-
-    const getPets = await loadJSON('./pets-db.json')
-    console.log(getPets)
-
-    class Card {
-        constructor(props = {}) {
-            this.id = props.id
-            this.name = props.name
-            this.age = props.age
-            this.race = props.race
-            this.comment = props.comment
-        }
-    } */
+    $(document.querySelectorAll('#burgerBtn')).on('click', function () {
+        $('.header__nav').toggleClass('--active')
+        $('#burgerBtn').toggleClass('--active')
+    })
 
     $(document.getElementById('petsLink').addEventListener('click', function () {
         window.location.replace('http://localhost:3002/pets.html#')
     }))
 
-    const petsLinks = document.querySelectorAll('.homeless__list-link')
-    console.log(petsLinks)
-
-    petsLinks.forEach((item) => {
-        /* let index = item.id
-
-        const newCard = new Card({
-            id: getPets.pets[index].id,
-            name: getPets.pets[index].name,
-            age: getPets.pets[index].age,
-            race: getPets.pets[index].race,
-            comment: getPets.pets[index].comment
-        }) */
-
-        item.addEventListener('click', function () {
-            window.location.replace('http://localhost:3002/card-1.html#')
+    async function sendData(data) {
+        return await fetch('https://e.mail.ru/inbox/slupitskey@mail.ru', {
+            method: 'POST',
+            body: data,
         })
-    })
-    console.log(petName)
+    }
+
+    function serializeForm(formNode) {
+        const { elements } = formNode
+        const data = Array.from(elements)
+            .filter((item) => !!item.name)
+            .map((element) => {
+                const { name, value } = element
+                return { name, value }
+            })
+
+        console.log(data)
+    }
+
+    async function handleFormSubmit(event) {
+        event.preventDefault()
+
+        const data = serializeForm(event.target)
+        const response = await sendData(data)
+    }
+
+    const questionForm = document.getElementById('questionForm')
+    questionForm.addEventListener('submit', handleFormSubmit)
+
 });
