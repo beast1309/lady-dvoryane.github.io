@@ -21,10 +21,26 @@
 
     <div class="wrapper">
         <header class="header">
+            <button class="header__menu burgerBtn" id="burgerBtn">
+                <svg width="70" height="35" viewBox="0 0 70 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="10" y1="2.5" x2="70" y2="2.5" stroke="#EC92A1" stroke-width="5" />
+                    <line y1="17.5" x2="60" y2="17.5" stroke="#EC92A1" stroke-width="5" />
+                    <line x1="10" y1="32.5" x2="70" y2="32.5" stroke="#EC92A1" stroke-width="5" />
+                </svg>
+            </button>
             <nav class="header__nav">
                 <a class="header__nav-link" href="index.html">главная</a>
                 <a class="header__nav-link --active" href="pets.html">подопечные</a>
                 <a class="header__nav-link" href="contacts.html">контакты</a>
+                <button class="header__nav-close closeBtn" id="closeBtn">
+                    <svg width="60" height="60" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.0001 26L26.0001 16M26.0001 26L16.0001 16" stroke="#67C8FF" stroke-width="2"
+                            stroke-linecap="round" />
+                        <path
+                            d="M31 38.3244C28.0583 40.0261 24.6428 41 21 41C9.9544 41 1 32.0457 1 21C1 9.9544 9.9544 1 21 1C32.0457 1 41 9.9544 41 21C41 24.6428 40.0261 28.0583 38.3244 31"
+                            stroke="#67C8FF" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
             </nav>
             <a class="header__logo" href="#">
                 <img class="header__logo-image" src="images/header-logo.png" alt="">

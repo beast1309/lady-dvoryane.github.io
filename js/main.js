@@ -32,14 +32,24 @@ $(async function () {
     })
 
     const cardSwiper = new Swiper('.card__swiper', {
-        slidesPerView: 5,
+        slidesPerView: 3,
         loop: true,
         speed: 500,
-        centeredSlides: true,
+        /* centeredSlides: true, */
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+            720: {
+                centeredSlides: true,
+                slidesPerView: 4
+            },
+            1200: {
+                centeredSlides: true,
+                slidesPerView: 5
+            }
+        }
     })
 
     $(document.querySelectorAll('#questionBtn')).on('click', function () {
@@ -49,6 +59,8 @@ $(async function () {
     $(document.querySelectorAll('#closeBtn')).on('click', function () {
         $('.questionForm').removeClass('--active')
         $('.acceptForm').removeClass('--active')
+        $('.header__nav').removeClass('--active')
+        $('#burgerBtn').removeClass('--active')
     })
 
     $(document.querySelectorAll('#acceptBtn')).on('click', function () {
